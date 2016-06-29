@@ -6,7 +6,7 @@ LABEL caddy_version="0.8.3" architecture="amd64"
 RUN apk add --update openssh-client git tar php-fpm
 
 # essential php libs
-RUN apk add php-curl php-gd php-zip php-iconv php-sqlite3 php-mysql php-mysqli php-json
+RUN apk add php-curl php-gd php-zip php-iconv php-sqlite3 php-mysql php-mysqli php-json php-pdo
 
 # allow environment variable access.
 RUN echo "clear_env = no" >> /etc/php/php-fpm.conf
