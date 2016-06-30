@@ -3,11 +3,6 @@ MAINTAINER Miller P. Magalhães <miller@mpdev.com.br>
 
 LABEL caddy_version="0.8.3" architecture="amd64"
 
-RUN setup-proxy "http://miller:7Nt2XczI@192.168.111.25:3128"
-
-RUN export http_proxy=http://miller:7Nt2XczI@192.168.111.25:3128
-RUN export https_proxy=http://miller:7Nt2XczI@192.168.111.25:3128
-
 RUN apk add --update openssh-client git tar
 
 RUN curl --silent --show-error --fail --location \

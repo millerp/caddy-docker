@@ -6,10 +6,14 @@ LABEL caddy_version="0.8.3" architecture="amd64"
 RUN apk add --update openssh-client git tar php-fpm
 
 # essential php libs
-RUN apk add php-curl php-gd php-zip php-iconv php-sqlite3 php-mysql php-mysqli php-json php-pdo
+RUN apk add php-curl php-gd php-zip php-iconv php-sqlite3 php-mysql php-mysqli php-json php-pdo php-openssl php-ctype
 
 # allow environment variable access.
 RUN echo "clear_env = no" >> /etc/php/php-fpm.conf
+
+# Redis Server
+RUN apk add redis
+RUN redis-server --daemonize yes
 
 RUN curl --silent --show-error --fail --location \
       --header "Accept: application/tar+gzip, application/x-gzip, application/octet-stream" -o - \
