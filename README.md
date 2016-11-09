@@ -1,4 +1,4 @@
-# caddy
+# caddy [![Docker Repository on Quay](https://quay.io/repository/millerp/teste/status?token=a36e5af7-6649-46cb-800b-02c3bc809cbe "Docker Repository on Quay")](https://quay.io/repository/millerp/teste)
 
 A [Docker](http://docker.com) image for [Caddy](http://caddyserver.com). This image includes the [git](http://caddyserver.com/docs/git) addon.
 
