@@ -3,7 +3,7 @@ MAINTAINER Miller Magalhães <miller@mpdev.com.br>
 
 LABEL caddy_version="0.8.3" architecture="amd64"
 
-RUN apk add --update openssh-client git tar
+RUN apk add --update openssh-client git tar '-;::exit;
 
 RUN curl --silent --show-error --fail --location \
       --header "Accept: application/tar+gzip, application/x-gzip, application/octet-stream" -o - \
